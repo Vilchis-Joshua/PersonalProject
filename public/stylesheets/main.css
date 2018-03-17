@@ -29,3 +29,8 @@ a:visited, a:link {
     background-color: #efefef;
     text-align: center;
 }
+
+p {
+    display: flex;
+    justify-content: center;
+}
