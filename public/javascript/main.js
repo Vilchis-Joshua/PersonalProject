@@ -25,3 +25,10 @@ $.ajax({
         $("#apod_title").text(result.title);
     }
 });
+
+$(document).ready(function () {
+    if ($('#displayImage').is('empty')) {
+        $('displayImage').append(document.createTextNode('No pictures saved'));
+    }
+})
+
