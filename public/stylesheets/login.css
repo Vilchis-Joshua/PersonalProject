@@ -12,3 +12,9 @@ a:visited, a:link {
     text-decoration: none;
     color: #000080;
 }
+
+
+#center {
+    display: flex;
+    justify-content: center;
+}
