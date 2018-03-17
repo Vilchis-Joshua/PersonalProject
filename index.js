@@ -115,3 +115,5 @@ function calculateRate(req, res) {
 
 
 app.listen(app.get('port'), () => console.log('listening to: ' + app.get('port')));
+
+// NASA API ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo
