@@ -115,30 +115,33 @@ function calculateRate(req, res) {
 
 
 
-var url = 'https://api.nasa.gov/planetary/apod?api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo';
-var httpRequest; //declare here for good scope
-if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
-    httpRequest = new XMLHttpRequest();
-} else if (window.ActiveXObject) { // IE 6 and older
-    httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
-}
-httpRequest.onreadystatechange = function () {
-    if (httpRequest.readyState === XMLHttpRequest.DONE && httpRequest.status == 200) {
-        returnedData = httpRequest.responseText;
-        var data = JSON.parse(returnedData);
-        if (data.hasOwnProperty('results')) {
-            var dates = data.results.map(function (result) {
-                return result.date;
-            });
-            console.log('dates: ', dates);
-        }
-    } else {
-        // still not ready or error occurred
-    }
-};
-httpRequest.open('GET', url, true);
-httpRequest.send(null);
+var url = "https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo";
 
+
+$.ajax({
+    url: url,
+    success: function (result) {
+        if ("copyright" in result) {
+            $("#copyright").text("Image Credits: " + result.copyright);
+        }
+        else {
+            $("#copyright").text("Image Credits: " + "Public Domain");
+        }
+
+        if (result.media_type == "video") {
+            $("#apod_img_id").css("display", "none");
+            $("#apod_vid_id").attr("src", result.url);
+        }
+        else {
+            $("#apod_vid_id").css("display", "none");
+            $("#apod_img_id").attr("src", result.url);
+        }
+        $("#reqObject").text(url);
+        $("#returnObject").text(JSON.stringify(result, null, 4));
+        $("#apod_explaination").text(result.explanation);
+        $("#apod_title").text(result.title);
+    }
+});
 
 
 app.listen(app.get('port'), () => console.log('listening to: ' + app.get('port')));
