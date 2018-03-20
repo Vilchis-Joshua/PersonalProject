@@ -7,5 +7,5 @@ function searchInfo() {
 
         })
     })
-    console.log('Search: ' + x);
+    console.log('Search: ' + search);
 }
