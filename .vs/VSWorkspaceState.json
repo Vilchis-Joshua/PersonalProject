@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\public",
+    "\\public\\html",
+    "\\public\\html\\nasa",
+    "\\public\\javascript",
     "\\public\\stylesheets"
   ],
-  "SelectedNode": "\\index.js",
+  "SelectedNode": "\\public\\stylesheets\\main.css",
   "PreviewInSolutionExplorer": false
 }
