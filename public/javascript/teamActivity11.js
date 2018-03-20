@@ -7,8 +7,10 @@ function searchInfo() {
 
     //    })
     //})
+    var apiKey = 'http://www.omdbapi.com/?apikey=[yourkey]&'
+    console.log('ApiKey: ' + apiKey);
     console.log('Search: ' + search);
-
+    $.get('http://www.omdbapi.com/');
     findMovie(search);
 }
 
