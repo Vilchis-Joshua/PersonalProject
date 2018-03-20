@@ -13,5 +13,5 @@ function searchInfo() {
 }
 
 function findMovie(x) {
-    console.log('Search # 2' + search);
+    console.log('Search # 2' + x);
 }
