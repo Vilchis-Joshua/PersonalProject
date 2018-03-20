@@ -8,7 +8,7 @@ function searchInfo() {
     //    })
     //})
 
-    var params = { s: search, apikey: 'a12116e9' };
+    var params = { s: search, apikey: 'http://www.omdbapi.com/?i=tt3896198&apikey=a12116e9' };
     console.log('Search: ' + search);
     $.get('http://www.omdbapi.com/', params, (search, status) => {
         console.log(status);
