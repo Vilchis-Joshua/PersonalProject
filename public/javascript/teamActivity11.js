@@ -1,4 +1,4 @@
 function searchInfo() {
-    var x = document.getElementById('movieSearch');
-    console.log('x: ' + String(x));
+    var x = $(document).('#movieSearch').val();
+    console.log('Search: ' + x);
 }
