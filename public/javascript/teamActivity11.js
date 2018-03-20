@@ -1,6 +1,6 @@
 function searchInfo() {
     var x = $(document).ready(() => {
-        $('#movieSearch').val();
+        $('#movieSearch').text();
     })
     console.log('Search: ' + x);
 }
