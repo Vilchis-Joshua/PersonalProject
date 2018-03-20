@@ -7,11 +7,14 @@ function searchInfo() {
 
     //    })
     //})
-    var apiKey = 'http://www.omdbapi.com/?apikey=[yourkey]&'
-    console.log('ApiKey: ' + apiKey);
+
+    var params = { s: search, apikey: 'http://www.omdbapi.com/?i=tt3896198&apikey=a12116e9' };
     console.log('Search: ' + search);
-    $.get('http://www.omdbapi.com/');
-    findMovie(search);
+    $.get('http://www.omdbapi.com/', params, (search, status) => {
+        console.log(status);
+
+        findMovie(search);
+    });
 }
 
 function findMovie(x) {
