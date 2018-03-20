@@ -8,4 +8,10 @@ function searchInfo() {
     //    })
     //})
     console.log('Search: ' + search);
+
+    findMovie(search);
+}
+
+function findMovie(x) {
+    console.log('Search # 2' + search);
 }
