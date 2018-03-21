@@ -3,10 +3,8 @@
     "",
     "\\public",
     "\\public\\html",
-    "\\public\\html\\nasa",
-    "\\public\\javascript",
-    "\\public\\stylesheets"
+    "\\public\\javascript"
   ],
-  "SelectedNode": "\\public\\stylesheets\\main.css",
+  "SelectedNode": "\\public\\javascript\\teamActivity11.js",
   "PreviewInSolutionExplorer": false
 }

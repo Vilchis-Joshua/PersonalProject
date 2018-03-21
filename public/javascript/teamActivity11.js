@@ -1,5 +1,5 @@
 function searchInfo() {
-    var search = $('#movieSearch').val();
+    var searchBarInfo = $('#movieSearch').val();
     //$(document).ready(() => {
     //    $('btn1').click(() => {
     //        console.log('Inside function with val: ' + $('#movieSearch').val())
@@ -8,9 +8,9 @@ function searchInfo() {
     //    })
     //})
 
-    var params = { s: search, apikey: 'http://www.omdbapi.com/?apikey=[a12116e9]&' };
+    var params = { s: searchBarInfo, apikey: 'a12116e9' };
     console.log('Search: ' + search);
-    $.get('http://www.omdbapi.com/', params, (search, status) => {
+    $.get('https://www.omdbapi.com/', params, (search, status) => {
         console.log(status);
 
         findMovie(search);
