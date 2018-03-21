@@ -21,5 +21,11 @@ function findMovie(data) {
     if (data.Search && data.Search.length > 0) {
         var resultList = $('lists');
         resultList.empty();
+
+
+        for (var i = 0; i < data.Search.length; i++) {
+            var title = data.Search[i].Title;
+            resultList.append('<li><p>' + title + '</p></li>');
+        }
     }
 }
