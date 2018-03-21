@@ -9,7 +9,7 @@ function searchInfo() {
     //})
 
     var params = { s: searchBarInfo, apikey: 'a12116e9' };
-    console.log('Search: ' + search);
+    console.log('Search: ' + searchBarInfo);
     $.get('https://www.omdbapi.com/', params, (searchBarInfo, status) => {
         console.log(status);
 
