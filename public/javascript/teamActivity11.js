@@ -10,10 +10,10 @@ function searchInfo() {
 
     var params = { s: searchBarInfo, apikey: 'a12116e9' };
     console.log('Search: ' + search);
-    $.get('https://www.omdbapi.com/', params, (search, status) => {
+    $.get('https://www.omdbapi.com/', params, (searchBarInfo, status) => {
         console.log(status);
 
-        findMovie(search);
+        findMovie(searchBarInfo);
     });
 }
 
