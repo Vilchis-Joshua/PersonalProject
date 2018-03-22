@@ -4,19 +4,19 @@ var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 $(document).ready(function () {
     $(':button').click(function () {
         //var date = new Date();
-        var date = document.getElementById('thisDate').value;
-        var dd = date.getDate();
-        var mm = date.getMonth() + 1; //January is 0!
-        var yyyy = date.getFullYear();
+        var d = document.getElementById('thisDate').value;
+        var dd = d.getDate();
+        var mm = d.getMonth() + 1; //January is 0!
+        var yyyy = d.getFullYear();
         if (dd < 10) {
             dd = '0' + dd
         }
         if (mm < 10) {
             mm = '0' + mm
         }
-        date = yyyy + '-' + mm + '-' + dd;
+        d = yyyy + '-' + mm + '-' + dd;
         $.ajax({
-            url: url + today + apiKey,
+            url: url + d + apiKey,
             success: function (result) {
                 if ("copyright" in result) {
                     $("#copyright").text("Image Credits: " + result.copyright);
