@@ -1,45 +1,74 @@
-var picOfDayurl = "https://api.nasa.gov/planetary/apod?api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
+//var picOfDayurl = "https://api.nasa.gov/planetary/apod?api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
+
+
+//$.ajax({
+//    url: picOfDayurl,
+//    success: function (result) {
+//        if ("copyright" in result) {
+//            $("#copyright").text("Image Credits: " + result.copyright);
+//        }
+//        else {
+//            $("#copyright").text("Image Credits: " + "Public Domain");
+//        }
+
+//        if (result.media_type == "video") {
+//            $("#apod_img_id").css("display", "none");
+//            $("#apod_vid_id").attr("src", result.url);
+//        }
+//        else {
+//            $("#apod_vid_id").css("display", "none");
+//            $("#apod_img_id").attr("src", result.url);
+//        }
+//        $("#reqObject").text(picOfDayurl);
+//        $("#returnObject").text(JSON.stringify(result, null, 4));
+//        $("#apod_explaination").text(result.explanation);
+//        $("#apod_title").text(result.title);
+//    }
+//});
+
+
+var today = new Date();
+var url = "https://api.nasa.gov/planetary/apod?date=";
+var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
+var photoDate = $('#thisDate').val();
 
 
 $.ajax({
-    url: picOfDayurl,
-    success: function (result) {
-        if ("copyright" in result) {
+    url: url + photoDate + apiKey,
+    succes: function (result) {
+        if ('copyright' in result) {
             $("#copyright").text("Image Credits: " + result.copyright);
-        }
-        else {
-            $("#copyright").text("Image Credits: " + "Public Domain");
+        } else {
+            $('#copyright').text('Image Credits: ' + 'Public Domain');
         }
 
         if (result.media_type == "video") {
-            $("#apod_img_id").css("display", "none");
-            $("#apod_vid_id").attr("src", result.url);
+            //Show the video ID
+            //$("#main_title").hide();
+            //$("#apod_vid_id").show();
+            //$("#hideImageLink").hide();
+            //$("#hideDescrip").show();
+            //$("#hideNFO").show();
+            //$("#apod_hdurl").hide();
+            //$("#hideTable").show();
+            //$("#apod_vid_id").attr("src", result.url);
+            //$("#errorMessage").hide();
+            ////Hide the image ID
+            //$("#apod_img_id").hide();
         }
+        //Control what happens with an image
         else {
-            $("#apod_vid_id").css("display", "none");
+            //Show the image ID
+            $("#main_title").hide();
+            $("#apod_img_id").show();
+            $("#hideImageLink").show();
+            $("#apod_hdurl").show();
+            $("#hideDescrip").show();
             $("#apod_img_id").attr("src", result.url);
         }
-        $("#reqObject").text(picOfDayurl);
+
         $("#returnObject").text(JSON.stringify(result, null, 4));
-        $("#apod_explaination").text(result.explanation);
-        $("#apod_title").text(result.title);
-    }
-});
-
-
-var asteroidsUrl = "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
-$.ajax({
-    url: asteroidsUrl,
-    success: function (results) {
-        $('#asteroids').attr('src', result.url);
     }
 })
 
-
-var meta = JSON.parse('https://epic.gsfc.nasa.gov/api/natural');
-$.ajax('https://epic.gsfc.nasa.gov/api/natural', {
-    success: function (iDataArr, stat, xhr) {
-        // do something with the list
-    }
-});
 // NASA API ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo
