@@ -27,15 +27,11 @@ $.ajax({
 });
 
 
-var asteroidsUrl = "https://api.nasa.gov/neo/rest/v1/feed?start_date=START_DATE&end_date=END_DATE&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo"
-$(document).ready(function () {
-    $('asteroidsBtn').click(function () {
-        $.ajax({
-            url: asteroidsUrl,
-            success: function (results) {
-                $('#asteroids').attr('src', result.url);
-            }
-        })
-    })
+var asteroidsUrl = "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
+$.ajax({
+    url: asteroidsUrl,
+    success: function (results) {
+        $('#asteroids').attr('src', result.url);
+    }
 })
 // NASA API ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo
