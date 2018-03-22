@@ -35,7 +35,7 @@ p {
     justify-content: center;
 }
 
-h3 {
+h3, picStuff {
     display: flex;
     justify-content: center;
 }

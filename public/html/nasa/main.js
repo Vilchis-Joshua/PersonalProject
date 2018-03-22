@@ -37,25 +37,19 @@ $(document).ready(function () {
         $.ajax({
             url: url + photoDate + apiKey,
             succes: function (result) {
-                if ('copyright' in result) {
-                    $("#copyright").text("Image Credits: " + result.copyright);
-                } else {
-                    $('#copyright').text('Image Credits: ' + 'Public Domain');
-                }
-
                 if (result.media_type == "video") {
                     //Show the video ID
-                    //$("#main_title").hide();
-                    //$("#apod_vid_id").show();
-                    //$("#hideImageLink").hide();
-                    //$("#hideDescrip").show();
-                    //$("#hideNFO").show();
-                    //$("#apod_hdurl").hide();
-                    //$("#hideTable").show();
-                    //$("#apod_vid_id").attr("src", result.url);
-                    //$("#errorMessage").hide();
-                    ////Hide the image ID
-                    //$("#apod_img_id").hide();
+                    $("#main_title").hide();
+                    $("#apod_vid_id").show();
+                    $("#hideImageLink").hide();
+                    $("#hideDescrip").show();
+                    $("#hideNFO").show();
+                    $("#apod_hdurl").hide();
+                    $("#hideTable").show();
+                    $("#apod_vid_id").attr("src", result.url);
+                    $("#errorMessage").hide();
+                    //Hide the image ID
+                    $("#apod_img_id").hide();
                 }
                 //Control what happens with an image
                 else {
@@ -64,10 +58,21 @@ $(document).ready(function () {
                     $("#apod_img_id").show();
                     $("#hideImageLink").show();
                     $("#apod_hdurl").show();
-                    $("#hideDescrip").show();
+                    $("#picDescrip").show();
+                    $("#hideNFO").show();
+                    $("#hideTable").show();
                     $("#apod_img_id").attr("src", result.url);
-                }
+                    $("#errorMessage").hide();
+                    //Hide the video ID
+                    $("#apod_vid_id").hide();
 
+                }
+                $("#reqObject").text(url);
+                $("#returnObject").text(JSON.stringify(result, null, 4));
+                var address = '<a href="' + result.hdurl + '">' + hdVarLink + '</a>';
+                $('#apod_hdurl').html(address);
+                $("#apod_explanation").text(description + result.explanation);
+                $("#apod_title").text(result.title);
             }
         })
     })
