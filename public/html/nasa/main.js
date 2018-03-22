@@ -39,6 +39,7 @@ $(document).ready(function () {
                 $("#returnObject").text(JSON.stringify(result, null, 4));
                 $("#picDescrip").text(result.explanation);
                 $("#main_title").text(result.title);
+                $("returnObject").hide();
             }
         });
     })
