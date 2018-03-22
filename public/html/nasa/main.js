@@ -67,7 +67,6 @@ $.ajax({
             $("#apod_img_id").attr("src", result.url);
         }
 
-        $("#returnObject").text(JSON.stringify(result, null, 4));
     }
 })
 
