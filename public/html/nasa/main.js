@@ -1,6 +1,5 @@
-var picOfDayurl = "https://api.nasa.gov/planetary/apod?api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
+var picOfDayurl = "https://api.nasa.gov/planetary/apod?2000-01-01&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var today = new Date();
-var url = "https://api.nasa.gov/planetary/apod?date=";
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var photoDate = $('#thisDate').val();
 
@@ -21,6 +20,7 @@ $.ajax({
         else {
             $("#apod_vid_id").css("display", "none");
             $("#apod_img_id").attr("src", result.url);
+            $("")
         }
         $("#reqObject").text(picOfDayurl);
         $("#returnObject").text(JSON.stringify(result, null, 4));
