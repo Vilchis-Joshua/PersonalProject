@@ -4,7 +4,7 @@ var d;
 var picLink;
 
 $(document).ready(function () {
-    $(':button').click(function () {
+    $('#apodBtn').click(function () {
         //var date = new Date();
         ;
         //document.getElementById('thisDate').value;
@@ -50,8 +50,7 @@ $(document).ready(function () {
 
 
 function savePicture() {
-    console.log('date: ' + d);
-    console.log('pic link: ' + picLink);
+    var 
 }
 
 
