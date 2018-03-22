@@ -4,7 +4,7 @@ var url = "https://api.nasa.gov/planetary/apod?date=";
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var photoDate = $('#thisDate').val();
 
-//$.ajax({
+$.ajax({
     url: picOfDayurl,
     success: function (result) {
         if ("copyright" in result) {
