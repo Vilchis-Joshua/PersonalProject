@@ -1,22 +1,20 @@
 var url = "https://api.nasa.gov/planetary/apod?date=";
-var today = new Date();
-var d;
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
-var photoDate = $('#thisDate').val();
 
 $(document).ready(function () {
     $(':button').click(function () {
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1; //January is 0!
-        var yyyy = today.getFullYear();
+        //var date = new Date();
+        var date = document.getElementById('thisDate').value;
+        var dd = date.getDate();
+        var mm = date.getMonth() + 1; //January is 0!
+        var yyyy = date.getFullYear();
         if (dd < 10) {
             dd = '0' + dd
         }
         if (mm < 10) {
             mm = '0' + mm
         }
-        today = yyyy + '-' + mm + '-' + dd;
+        date = yyyy + '-' + mm + '-' + dd;
         $.ajax({
             url: url + today + apiKey,
             success: function (result) {
@@ -35,7 +33,7 @@ $(document).ready(function () {
                     $("#apod_vid_id").css("display", "none");
                     $("#apod_img_id").attr("src", result.url);
                 }
-                $("#reqObject").text(picOfDayurl);
+                $("#reqObject").text(url);
                 $("#returnObject").text(JSON.stringify(result, null, 4));
                 $("#apod_explaination").text(result.explanation);
                 $("#apod_title").text(result.title);
