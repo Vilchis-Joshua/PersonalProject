@@ -4,8 +4,9 @@
     "\\public",
     "\\public\\html",
     "\\public\\html\\nasa",
-    "\\public\\javascript"
+    "\\public\\javascript",
+    "\\public\\stylesheets"
   ],
-  "SelectedNode": "\\public\\javascript\\teamActivity11.js",
+  "SelectedNode": "\\public\\html\\nasa\\main.js",
   "PreviewInSolutionExplorer": false
 }

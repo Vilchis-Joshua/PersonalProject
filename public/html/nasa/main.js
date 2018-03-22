@@ -3,7 +3,7 @@ var today = new Date();
 var d = $("#thisDate").val();
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var photoDate = $('#thisDate').val();
-
+console.log(d);
 $(document).ready(function () {
     $(':button').click(function () {
         $.ajax({
