@@ -1,10 +1,12 @@
 var url = "https://api.nasa.gov/planetary/apod?date=";
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
+var d = new Date(document.getElementById('thisDate').value)
+var picLink;
 
 $(document).ready(function () {
     $(':button').click(function () {
         //var date = new Date();
-        var d = new Date(document.getElementById('thisDate').value);
+        ;
         console.log(d);
         //document.getElementById('thisDate').value;
         var dd = d.getDate();
@@ -46,8 +48,10 @@ $(document).ready(function () {
 })
 
 
-
-
+function savePicture() {
+    console.log('date: ' + d);
+    console.log('pic link: ' + picLink);
+}
 
 
 //$(document).ready(function () {
