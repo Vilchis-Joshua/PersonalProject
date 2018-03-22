@@ -1,6 +1,6 @@
 var url = "https://api.nasa.gov/planetary/apod?date=";
 var today = new Date();
-var d = $("#thisDate").val();
+var d = document.getElementById('thisDate').value;
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var photoDate = $('#thisDate').val();
 
