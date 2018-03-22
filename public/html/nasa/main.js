@@ -13,11 +13,11 @@ $.ajax({
 
         if (result.media_type == "video") {
             $("#apod_img_id").css("display", "none");
-            $("#apod_vid_id").attr("src", result.url);
+            $("#pics").attr("src", result.url);
         }
         else {
             $("#apod_vid_id").css("display", "none");
-            $("#apod_img_id").attr("src", result.url);
+            $("#pics").attr("src", result.url);
         }
         $("#reqObject").text(url);
         $("#returnObject").text(JSON.stringify(result, null, 4));
