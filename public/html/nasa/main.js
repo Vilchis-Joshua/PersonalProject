@@ -37,7 +37,7 @@ $(document).ready(function () {
                 }
                 $("#reqObject").text(url);
                 $("#returnObject").text(JSON.stringify(result, null, 4));
-                $("picDescrip").text(result.explanation);
+                $("#picDescrip").text(result.explanation);
                 $("#main_title").text(result.title);
             }
         });
