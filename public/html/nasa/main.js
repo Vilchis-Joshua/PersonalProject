@@ -37,6 +37,7 @@ $(document).ready(function () {
         $.ajax({
             url: url + photoDate + apiKey,
             succes: function (result) {
+                alert('It worked');
                 if (result.media_type == "video") {
                     //Show the video ID
                     $("#main_title").hide();
