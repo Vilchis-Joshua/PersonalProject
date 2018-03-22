@@ -7,7 +7,6 @@ $(document).ready(function () {
     $(':button').click(function () {
         //var date = new Date();
         ;
-        console.log(d);
         //document.getElementById('thisDate').value;
         d = new Date(document.getElementById('thisDate').value);
         var dd = d.getDate();
