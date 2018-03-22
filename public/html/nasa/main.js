@@ -34,10 +34,11 @@ var photoDate = $('#thisDate').val();
 
 $(document).ready(function () {
     $('apodBtn').click(function () {
+        $('#picDescrip').text('working?');
+
         $.ajax({
             url: url + photoDate + apiKey,
             succes: function (result) {
-                $('#picDescrip').text('working?');
                 if (result.media_type == "video") {
                     //Show the video ID
                     $("#main_title").hide();
