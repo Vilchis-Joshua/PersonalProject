@@ -9,7 +9,7 @@ $(document).ready(function () {
         ;
         console.log(d);
         //document.getElementById('thisDate').value;
-        d = new Date(document.getElementById('thisDate').value;
+        d = new Date(document.getElementById('thisDate').value);
         var dd = d.getDate();
         var mm = d.getMonth() + 1; //January is 0!
         var yyyy = d.getFullYear();
