@@ -1,13 +1,13 @@
 var url = "https://api.nasa.gov/planetary/apod?date=";
 var today = new Date();
-var d = document.getElementById('thisDate').value;
+var d;
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var photoDate = $('#thisDate').val();
 
 $(document).ready(function () {
     $(':button').click(function () {
         $.ajax({
-            url: url + d + apiKey,
+            url: url + today + apiKey,
             success: function (result) {
                 if ("copyright" in result) {
                     $("#copyright").text("Image Credits: " + result.copyright);
