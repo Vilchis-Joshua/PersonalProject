@@ -31,7 +31,10 @@ var asteroidsUrl = "https://api.nasa.gov/neo/rest/v1/feed?start_date=START_DATE&
 $(document).ready(function () {
     $('asteroidsBtn').click(function () {
         $.ajax({
-            url: 
+            url: asteroidsUrl,
+            success: function (results) {
+                $('#asteroids').attr('src', result.url);
+            }
         })
     })
 })
