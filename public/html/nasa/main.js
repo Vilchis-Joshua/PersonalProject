@@ -34,4 +34,12 @@ $.ajax({
         $('#asteroids').attr('src', result.url);
     }
 })
+
+
+var meta = JSON.parse('https://epic.gsfc.nasa.gov/api/natural');
+$.ajax('https://epic.gsfc.nasa.gov/api/natural', {
+    success: function (iDataArr, stat, xhr) {
+        // do something with the list
+    }
+});
 // NASA API ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo
