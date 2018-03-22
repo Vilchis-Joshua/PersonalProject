@@ -1,8 +1,8 @@
-var url = "https://api.nasa.gov/planetary/apod?api_key=NNKOjkoul8n1CH18TWA9gwngW1s1SmjESPjNoUFo";
+var picOfDayurl = "https://api.nasa.gov/planetary/apod?api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 
 
 $.ajax({
-    url: url,
+    url: picOfDayurl,
     success: function (result) {
         if ("copyright" in result) {
             $("#copyright").text("Image Credits: " + result.copyright);
@@ -25,3 +25,14 @@ $.ajax({
         $("#apod_title").text(result.title);
     }
 });
+
+
+var asteroidsUrl = "https://api.nasa.gov/neo/rest/v1/feed?start_date=START_DATE&end_date=END_DATE&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo"
+$(document).ready(function () {
+    $('asteroidsBtn').click(function () {
+        $.ajax({
+            url: 
+        })
+    })
+})
+// NASA API ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo
