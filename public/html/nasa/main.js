@@ -5,7 +5,7 @@ var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var photoDate = $('#thisDate').val();
 
 $(document).ready(function () {
-    $('apodBtn').click(function () {
+    $(':button').click(function () {
         $.ajax({
             url: url + d + apiKey,
             success: function (result) {
