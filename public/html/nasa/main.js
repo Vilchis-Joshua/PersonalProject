@@ -1,6 +1,6 @@
 var url = "https://api.nasa.gov/planetary/apod?date=";
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
-var d = new Date(document.getElementById('thisDate').value;
+var d;
 var picLink;
 
 $(document).ready(function () {
@@ -9,6 +9,7 @@ $(document).ready(function () {
         ;
         console.log(d);
         //document.getElementById('thisDate').value;
+        d = new Date(document.getElementById('thisDate').value;
         var dd = d.getDate();
         var mm = d.getMonth() + 1; //January is 0!
         var yyyy = d.getFullYear();
