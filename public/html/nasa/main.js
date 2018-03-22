@@ -4,7 +4,9 @@ var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 $(document).ready(function () {
     $(':button').click(function () {
         //var date = new Date();
-        var d = document.getElementById('thisDate').value;
+        var d = new Date(document.getElementById('thisDate').value);
+        console.log(d);
+        //document.getElementById('thisDate').value;
         var dd = d.getDate();
         var mm = d.getMonth() + 1; //January is 0!
         var yyyy = d.getFullYear();
