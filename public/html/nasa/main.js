@@ -50,7 +50,7 @@ $(document).ready(function () {
 
 
 function savePicture() {
-    var 
+    var x;
 }
 
 
