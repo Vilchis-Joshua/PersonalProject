@@ -3,10 +3,8 @@
     "",
     "\\public",
     "\\public\\html",
-    "\\public\\html\\nasa",
-    "\\public\\javascript",
-    "\\public\\stylesheets"
+    "\\public\\html\\nasa"
   ],
-  "SelectedNode": "\\public\\html\\nasa\\main.js",
+  "SelectedNode": "\\public\\html\\nasa\\saved.js",
   "PreviewInSolutionExplorer": false
 }

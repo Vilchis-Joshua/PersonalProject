@@ -9,7 +9,7 @@ function startUp() {
         for (var i = 0; i < localStorage.length; i++) {
             //var image = document.createElement('img');
             var image = document.createElement('img');
-            image.setAttribute('id', i);
+            image.setAttribute('id', ('image ' + 1));
             var saved = localStorage.getItem((i + 1));
             console.log('saved: ' + saved);
             image.src = saved;
