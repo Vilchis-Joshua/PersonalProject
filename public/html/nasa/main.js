@@ -54,7 +54,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('#savePic').click(function () {
         if (localStorage.length == 0) {
-            var key = 'saved 1';
+            var key = i;
             localStorage.setItem(key, picLink)
         } else {
             var z;
