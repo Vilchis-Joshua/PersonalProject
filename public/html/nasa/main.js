@@ -56,7 +56,7 @@ $(document).ready(function () {
             var key = 'saved 1';
             localStorage.setItem(key, picLink)
         } else {
-            if ()
+            var z;
         }
     })
 })
