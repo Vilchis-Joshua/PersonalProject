@@ -1,3 +1,5 @@
+var divs = document.getElementById('displaySaved');
+
 function startUp() {
     
     if (localStorage.length == 0) {
@@ -6,10 +8,13 @@ function startUp() {
     } else {
         for (var i = 0; i < localStorage.length; i++) {
             //var image = document.createElement('img');
-            var image = $('img');
-            var text = localStorage.getItem(i);
-            image.attr('id', text);
-            $("#displaySaved").append(image);
+            var image = document.createElement('img');
+            image.setAttribute('id', i);
+            var saved = localStorage(i + 1);
+            console.log('saved: ' + saved);
+            image.src = saved;
+            
+            divs.appendChild(image)
         }
     }
 }
