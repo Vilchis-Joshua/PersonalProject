@@ -43,6 +43,7 @@ $(document).ready(function () {
                 $("#main_title").text(result.title);
                 $("returnObject").hide();
                 picLink = result.url;
+                console.log(picLink);
             }
         });
     })
