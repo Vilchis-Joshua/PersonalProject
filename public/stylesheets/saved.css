@@ -2,3 +2,8 @@ img:hover {
     width: 90%;
     height: 90%;
 }
+
+img {
+    padding-left: 1em;
+    padding-right: 1em;
+}

@@ -13,6 +13,7 @@ function startUp() {
             image.setAttribute('src', saved);
             image.setAttribute('width', '250px');
             image.setAttribute('height', '250px');
+            
             console.log(image.src);
             document.getElementById('displaySaved').appendChild(image)
         }
