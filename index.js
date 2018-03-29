@@ -114,4 +114,32 @@ function calculateRate(req, res) {
 }
 
 
+//app.use(logRequest);
+app.post('/login', (req, res, next) => {
+
+});
+
+
+
+app.get('/getServerTime', verifyLogin, (req, res, next) => {
+
+});
+
+
+
+/*********************************************
+* function for the middleware process
+* ******************************************/
+function verifyLogin(req, res, next) {
+
+    // for now - - other code will need to be put here
+    next();
+
+}
+
+function logRequest(req, res, next) {
+    console.log("Received a request for: " + req.url);
+    next();
+}
+
 app.listen(app.get('port'), () => console.log('listening to: ' + app.get('port')));
