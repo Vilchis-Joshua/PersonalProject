@@ -1,5 +1,7 @@
 body {
     background-color: rgb(220, 220, 220);
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 a:hover, a:active {
@@ -80,6 +82,7 @@ img {
 }
 
 #pickDateP {
-    color: rgba(17, 171, 162, 0.48);
+    color: rgba(17, 171, 162, 1);
     font-size: 14px;
+    font-weight: bold;
 }
