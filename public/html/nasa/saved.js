@@ -9,7 +9,6 @@ function startUp() {
             var image = document.createElement('img');
             image.setAttribute('id', ('image ' + 1));
             var saved = localStorage.getItem((i + 1));
-            console.log('saved: ' + saved);
             image.setAttribute('src', saved);
             image.setAttribute('width', '250px');
             image.setAttribute('height', '250px');
@@ -18,6 +17,10 @@ function startUp() {
         }
     }
 }
+
+$(document).ready(() => {
+    startUp();
+})
 
 
 //$(document).ready(function () {
