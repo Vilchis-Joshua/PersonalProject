@@ -60,20 +60,24 @@ $(document).ready(function () {
 
         console.log('localstorage length: ' + localStorage.length);
         if (localStorage.length == 0) {
-            index = 1;
-            localStorage.setItem(index, picLink);
-            index++;
-        } else {
-            for (var i = 0; i < localStorage.length; i++) {
-                var image = localStorage.getItem(i);
-                if (image === picLink) {
-                    alert('You already have this image saved!');
-                } else {
-                    localStorage.setItem(index, picLink);
-                    index++;
-                }
-            }
+            index = 0;
         }
+        localStorage.setItem(index, picLink);
+        //if (localStorage.length == 0) {
+        //    index = 1;
+        //    localStorage.setItem(index, picLink);
+        //    index++;
+        //} else {
+        //    for (var i = 0; i < localStorage.length; i++) {
+        //        var image = localStorage.getItem(i);
+        //        if (image === picLink) {
+        //            alert('You already have this image saved!');
+        //        } else {
+        //            localStorage.setItem(index, picLink);
+        //            index++;
+        //        }
+        //    }
+        //}
 
     })
 
