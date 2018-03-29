@@ -5,8 +5,7 @@ body {
 }
 
 img:hover {
-    width: 90%;
-    height: 90%;
+    transform: scale(1.5);
 }
 
 img {
