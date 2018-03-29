@@ -27,7 +27,7 @@ $(document).ready(function () {
         for (var i = 0; i < localStorage.length; i++) {
             var image = document.createElement('img');
             image.setAttribute('id', ('image' + i));
-            image.setAttribute('src', localStorage.getItem((i + 1));
+            image.setAttribute('src', localStorage.getItem((i + 1)));
             console.log(image);
             $('displaySaved').append(image);
         }
