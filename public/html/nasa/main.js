@@ -73,6 +73,7 @@ $(document).ready(function () {
         }
         if (a == 1) {
             localStorage.setItem(index, picLink);
+            index++;
         } else {
             alert('You already saved this');
             a = 1;
