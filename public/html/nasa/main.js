@@ -8,7 +8,7 @@ $(document).ready(function () {
     $('#apodBtn').click(function () {
         //var date = new Date();
         //document.getElementById('apod_img_id').style.visibility = 'hidden';
-        $('apod_img_id').show();
+        $('#apod_img_id').show();
         //document.getElementById('thisDate').value;
         d = new Date(document.getElementById('thisDate').value);
         var dd = d.getDate();
@@ -68,7 +68,7 @@ $(document).ready(function () {
         localStorage.setItem(index, picLink);
         index++;
 
-        $('apod_img_id').hide();
+        $('#apod_img_id').hide();
     })
 })
 
