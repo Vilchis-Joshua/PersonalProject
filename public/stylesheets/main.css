@@ -78,3 +78,8 @@ img {
     height: 30px;
     width: 60px;
 }
+
+#pickDateP {
+    color: rgba(17, 171, 162, 0.48);
+    font-size: 14px;
+}
