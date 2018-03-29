@@ -4,6 +4,6 @@ img:hover {
 }
 
 img {
-    padding-left: 1em;
-    padding-right: 1em;
+    border-left: 1em;
+    border-right: 1em;
 }
