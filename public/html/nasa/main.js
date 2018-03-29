@@ -58,10 +58,7 @@ $(document).ready(function () {
         //    var z;
         //}
 
-        if (localStorage.length == 0) {
-            index = 1;
-        }
-        if (localStorage.length == 0) {
+        if (localStorage.length == 1) {
             localStorage.setItem(index, picLink);
             index++;
         } else {
