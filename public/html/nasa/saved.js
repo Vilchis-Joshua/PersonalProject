@@ -1,5 +1,3 @@
-var divs = document.getElementById('displaySaved');
-
 function startUp() {
     
     if (localStorage.length == 0) {
@@ -13,8 +11,10 @@ function startUp() {
             var saved = localStorage.getItem((i + 1));
             console.log('saved: ' + saved);
             image.src = saved;
+            image.setAttribute('width', '250px');
+            image.setAttribute('height', '250px');
             console.log(image.src);
-            divs.appendChild(image)
+            document.getElementById('displayImage').appendChild(image)
         }
     }
 }
