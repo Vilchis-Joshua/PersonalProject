@@ -19,6 +19,9 @@ function startUp() {
     }
 }
 
+$(document).ready(() => {
+    startUp();
+})
 
 //$(document).ready(function () {
 //    if (localStorage.length == 0) {
