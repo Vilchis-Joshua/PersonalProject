@@ -49,11 +49,7 @@ $(document).ready(function () {
             }
         });
     })
-})
 
-
-
-$(document).ready(function () {
     $('#savePic').click(function () {
         //if (localStorage.length == 0) {
         //    var key = 1;
@@ -67,14 +63,10 @@ $(document).ready(function () {
         }
         localStorage.setItem(index, picLink);
         index++;
-
-        $('#apod_img_id').hide();
     })
-})
 
-function savePicture() {
-    var x;
-}
+    $('#apod_img_id').hide();
+})
 
 
 //$(document).ready(function () {
