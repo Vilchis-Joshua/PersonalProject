@@ -13,7 +13,7 @@ function startUp() {
             var saved = localStorage.getItem((i + 1));
             console.log('saved: ' + saved);
             image.src = saved;
-            
+            console.log(image.src);
             divs.appendChild(image)
         }
     }
