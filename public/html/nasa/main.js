@@ -63,6 +63,7 @@ $(document).ready(function () {
         }
         for (var i = 0; i < localStorage.length; i++) {
             if (localStorage.getItem(i) != picLink) {
+                alert('comes here');
                 localStorage.setItem(index, picLink);
                 index++;
             }
