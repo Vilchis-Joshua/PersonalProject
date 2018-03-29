@@ -58,9 +58,9 @@ $(document).ready(function () {
         //    var z;
         //}
 
-        if (localStorage.length == 1) {
+        if (localStorage.length == 0) {
             localStorage.setItem(index, picLink);
-            index++;
+            index = 2;
         } else {
             for (var i = 0; i < localStorage.length; i++) {
                 var image = localStorage.getItem(i);
