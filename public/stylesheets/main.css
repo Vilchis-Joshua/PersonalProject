@@ -48,7 +48,7 @@ footer {
     padding: 1rem;
     background-color: #efefef;
     text-align: center;*/
-}*/
+}
 
 p {
     display: flex;
@@ -68,4 +68,13 @@ h3, picStuff {
 img {
     max-height: 350px;
     max-width: 85%;
+}
+
+#apodBtn, #savePic {
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: rgba(17, 171, 162, 0.48);
+    color: white;
+    height: 30px;
+    width: 60px;
 }
