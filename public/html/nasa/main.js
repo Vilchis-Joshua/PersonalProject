@@ -59,10 +59,22 @@ $(document).ready(function () {
         //}
 
         console.log('localstorage length: ' + localStorage.length);
+        var a = 1;
+        for (var i = 0; i < localStorage.length; i++) {
+            var x = localStorage.getItem(i);
+            if (x === picLink) {
+                a = 0;
+            }
+        }
+
         if (localStorage.length == 0) {
             index = 0;
         }
-        localStorage.setItem(index, picLink);
+        if (a == 1) {
+            localStorage.setItem(index, picLink);
+        } else {
+            alert('You already saved this');
+        }
         //if (localStorage.length == 0) {
         //    index = 1;
         //    localStorage.setItem(index, picLink);
