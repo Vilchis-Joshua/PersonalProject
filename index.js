@@ -113,9 +113,13 @@ function calculateRate(req, res) {
     res.render('pages/results', d);
 }
 
-
+var success;
 //app.use(logRequest);
 app.post('/login', (req, res, next) => {
+    var user = $('username').val();
+});
+
+app.post('/logout', (req, res, next) => {
 
 });
 

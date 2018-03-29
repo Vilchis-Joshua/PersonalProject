@@ -3,9 +3,8 @@
     "",
     "\\public",
     "\\public\\html",
-    "\\public\\html\\nasa",
-    "\\public\\stylesheets"
+    "\\public\\html\\week12"
   ],
-  "SelectedNode": "\\public\\stylesheets\\login.css",
+  "SelectedNode": "\\index.js",
   "PreviewInSolutionExplorer": false
 }
