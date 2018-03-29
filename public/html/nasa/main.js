@@ -60,6 +60,10 @@ $(document).ready(function () {
         //} else {
         //    var z;
         //}
+
+        if (localStorage.length == 0) {
+            index = 0;
+        }
         localStorage.setItem(index, picLink);
         index++;
     })
