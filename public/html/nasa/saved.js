@@ -8,7 +8,7 @@ function startUp() {
             //var image = document.createElement('img');
             var image = document.createElement('img');
             image.setAttribute('id', ('image ' + 1));
-            var saved = localStorage.getItem((i + 1));
+            var saved = localStorage.getItem(i);
             //console.log('saved: ' + saved);
             image.setAttribute('src', saved);
             image.setAttribute('width', '250px');
