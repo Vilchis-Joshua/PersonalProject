@@ -10,6 +10,6 @@ img:hover {
 }
 
 img {
-    border-left: 1em;
-    border-right: 1em;
+    border-left: 3px;
+    border-right: 3px;
 }
