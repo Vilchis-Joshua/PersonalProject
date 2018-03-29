@@ -63,7 +63,7 @@ $(document).ready(function () {
             index = 2;
         } else {
             for (var i = 0; i < localStorage.length; i++) {
-                var image = localStorage.getItem(i);
+                var image = localStorage.getItem(i + 1);
                 if (image === picLink) {
                     alert('You already have this image saved!');
                 } else {
