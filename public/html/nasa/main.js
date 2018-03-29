@@ -8,7 +8,7 @@ $(document).ready(function () {
     $('#apodBtn').click(function () {
         //var date = new Date();
         //document.getElementById('apod_img_id').style.visibility = 'hidden';
-        $('apod_img_id').css('visibility', 'hidden');
+        $('apod_img_id').css('visibility', 'visible');
         //document.getElementById('thisDate').value;
         d = new Date(document.getElementById('thisDate').value);
         var dd = d.getDate();
