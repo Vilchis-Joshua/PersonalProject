@@ -3,6 +3,7 @@ var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var d;
 var picLink;
 var index = 1;
+var a;
 
 $(document).ready(function () {
     $('#apodBtn').click(function () {
@@ -59,7 +60,6 @@ $(document).ready(function () {
         //}
 
         console.log('localstorage length: ' + localStorage.length);
-        var a = 1;
         for (var i = 0; i < localStorage.length; i++) {
             var x = localStorage.getItem(i);
             if (x === picLink) {
@@ -69,6 +69,7 @@ $(document).ready(function () {
 
         if (localStorage.length == 0) {
             index = 0;
+            a = 1;
         }
         if (a == 1) {
             localStorage.setItem(index, picLink);
