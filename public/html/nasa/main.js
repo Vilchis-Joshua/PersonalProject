@@ -62,8 +62,10 @@ $(document).ready(function () {
             index = 0;
         }
         for (var i = 0; i < localStorage.length; i++) {
-            if (localStorage.getItem(i) != picLink) {
-                alert('comes here');
+            var image = localStorage.getItem(i);
+            if (image === picLink) {
+                alert('You already have this image saved!');
+            } else {
                 localStorage.setItem(index, picLink);
                 index++;
             }
