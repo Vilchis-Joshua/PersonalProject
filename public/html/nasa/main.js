@@ -58,6 +58,7 @@ $(document).ready(function () {
         //    var z;
         //}
 
+        console.log('localstorage length: ' + localStorage.length);
         if (localStorage.length == 0) {
             localStorage.setItem(index, picLink);
             index++;
