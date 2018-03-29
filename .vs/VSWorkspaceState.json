@@ -3,9 +3,8 @@
     "",
     "\\public",
     "\\public\\html",
-    "\\public\\html\\nasa",
-    "\\public\\stylesheets"
+    "\\public\\html\\nasa"
   ],
-  "SelectedNode": "\\temp.sh",
+  "SelectedNode": "\\public\\html\\nasa\\main.js",
   "PreviewInSolutionExplorer": false
 }

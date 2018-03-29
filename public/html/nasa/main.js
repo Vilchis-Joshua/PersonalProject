@@ -60,6 +60,7 @@ $(document).ready(function () {
 
         console.log('localstorage length: ' + localStorage.length);
         if (localStorage.length == 0) {
+            index = 1;
             localStorage.setItem(index, picLink);
             index++;
         } else {
