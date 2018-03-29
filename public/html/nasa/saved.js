@@ -26,8 +26,8 @@ $(document).ready(() => {
     $('#clear').click(() => {
         var answer = confirm('Are you sure?');
         if (answer == true) {
-            localStorage.clear();
             $('img').remove();
+            localStorage.clear();
             $('#display').text('You have no saved photos yet!');
         }
     })

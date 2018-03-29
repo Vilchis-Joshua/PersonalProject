@@ -60,10 +60,10 @@ $(document).ready(function () {
 
         if (localStorage.length == 0) {
             localStorage.setItem(index, picLink);
-            index = 2;
+            index++;
         } else {
             for (var i = 0; i < localStorage.length; i++) {
-                var image = localStorage.getItem(i + 1);
+                var image = localStorage.getItem(i);
                 if (image === picLink) {
                     alert('You already have this image saved!');
                 } else {
