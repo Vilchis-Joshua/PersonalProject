@@ -18,11 +18,6 @@ function startUp() {
     }
 }
 
-$(document).ready(() => {
-    startUp();
-})
-
-
 //$(document).ready(function () {
 //    if (localStorage.length == 0) {
 //        $('#display').text('You have no saved photos yet');
