@@ -74,6 +74,7 @@ $(document).ready(function () {
             localStorage.setItem(index, picLink);
         } else {
             alert('You already saved this');
+            a = 1;
         }
         //if (localStorage.length == 0) {
         //    index = 1;
