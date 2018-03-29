@@ -61,8 +61,12 @@ $(document).ready(function () {
         if (localStorage.length == 0) {
             index = 0;
         }
-        localStorage.setItem(index, picLink);
-        index++;
+        for (var i = 0; i < localStorage.length; i++) {
+            if (localStorage.getItem(i) != picLink) {
+                localStorage.setItem(index, picLink);
+                index++;
+            }
+        }
     })
 
     $('#apod_img_id').hide();

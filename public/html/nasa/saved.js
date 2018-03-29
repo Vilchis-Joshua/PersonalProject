@@ -31,17 +31,3 @@ $(document).ready(() => {
         }
     })
 })
-
-//$(document).ready(function () {
-//    if (localStorage.length == 0) {
-//        $('#display').text('You have no saved photos yet');
-//    } else {
-//        for (var i = 0; i < localStorage.length; i++) {
-//            var image = document.createElement('img');
-//            image.setAttribute('id', ('image' + i));
-//            image.setAttribute('src', localStorage.getItem((i + 1)));
-//            console.log(image);
-//            $('displaySaved').append(image);
-//        }
-//    }
-//})
