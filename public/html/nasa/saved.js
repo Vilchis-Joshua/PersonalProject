@@ -14,7 +14,7 @@ function startUp() {
             image.setAttribute('width', '250px');
             image.setAttribute('height', '250px');
             console.log(image.src);
-            document.getElementById('displayImage').appendChild(image)
+            document.getElementById('displaySaved').appendChild(image)
         }
     }
 }
