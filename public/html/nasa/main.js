@@ -57,6 +57,7 @@ $(document).ready(function () {
             var x = localStorage.getItem(i);
             if (x === picLink) {
                 a = 0;
+                return;
             }
         }
 
