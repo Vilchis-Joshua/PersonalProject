@@ -66,6 +66,7 @@ $(document).ready(function () {
             }
 
             if (isSaved == 1) {
+                console.log('repeat');
                 return;
             } else {
                 console.log(index);
