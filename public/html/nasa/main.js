@@ -2,7 +2,7 @@ var url = "https://api.nasa.gov/planetary/apod?date=";
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var d;
 var picLink;
-var index = 1;
+var index;
 var a;
 
 $(document).ready(function () {
@@ -52,13 +52,6 @@ $(document).ready(function () {
     })
 
     $('#savePic').click(function () {
-        //if (localStorage.length == 0) {
-        //    var key = 1;
-        //    localStorage.setItem(key, picLink)
-        //} else {
-        //    var z;
-        //}
-
         console.log('localstorage length: ' + localStorage.length);
         for (var i = 0; i < localStorage.length; i++) {
             var x = localStorage.getItem(i);
@@ -98,55 +91,6 @@ $(document).ready(function () {
 
     $('#apod_img_id').hide();
 })
-
-
-//$(document).ready(function () {
-//    $('apodBtn').click(function () {
-//        $('#picDescrip').text('working?');
-
-//        $.ajax({
-//            url: url + photoDate + apiKey,
-//            succes: function (result) {
-//                if (result.media_type == "video") {
-//                    //Show the video ID
-//                    $("#main_title").hide();
-//                    $("#apod_vid_id").show();
-//                    $("#hideImageLink").hide();
-//                    $("#hideDescrip").show();
-//                    $("#hideNFO").show();
-//                    $("#apod_hdurl").hide();
-//                    $("#hideTable").show();
-//                    $("#apod_vid_id").attr("src", result.url);
-//                    $("#errorMessage").hide();
-//                    //Hide the image ID
-//                    $("#apod_img_id").hide();
-//                }
-//                //Control what happens with an image
-//                else {
-//                    //Show the image ID
-//                    $("#main_title").hide();
-//                    $("#apod_img_id").show();
-//                    $("#hideImageLink").show();
-//                    $("#apod_hdurl").show();
-//                    $("#picDescrip").show();
-//                    $("#hideNFO").show();
-//                    $("#hideTable").show();
-//                    $("#apod_img_id").attr("src", result.url);
-//                    $("#errorMessage").hide();
-//                    //Hide the video ID
-//                    $("#apod_vid_id").hide();
-
-//                }
-//                $("#reqObject").text(url);
-//                $("#returnObject").text(JSON.stringify(result, null, 4));
-//                var address = '<a href="' + result.hdurl + '">' + hdVarLink + '</a>';
-//                $('#apod_hdurl').html(address);
-//                $("#apod_explanation").text(description + result.explanation);
-//                $("#apod_title").text(result.title);
-//            }
-//        })
-//    })
-//})
 
 
 // NASA API ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo
