@@ -3,7 +3,6 @@ var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var d;
 var picLink;
 var index;
-var a;
 
 $(document).ready(function () {
     $('#apodBtn').click(function () {
@@ -51,43 +50,22 @@ $(document).ready(function () {
         });
     })
 
+
     $('#savePic').click(function () {
-        console.log('localstorage length: ' + localStorage.length);
+        var total = localStorage.length;
+        var isSaved = 0;
         for (var i = 0; i < localStorage.length; i++) {
             var x = localStorage.getItem(i);
             if (x === picLink) {
-                a = 0;
-                return;
+                total = 1;
             }
         }
 
-        if (localStorage.length == 0) {
-            index = 0;
-            a = 1;
-        }
-        if (a == 1) {
-            localStorage.setItem(index, picLink);
-            index++;
+        if (total == 1) {
+            return;
         } else {
-            alert('You already saved this');
-            a = 1;
+            localStorage.setItem(total, picLink);
         }
-        //if (localStorage.length == 0) {
-        //    index = 1;
-        //    localStorage.setItem(index, picLink);
-        //    index++;
-        //} else {
-        //    for (var i = 0; i < localStorage.length; i++) {
-        //        var image = localStorage.getItem(i);
-        //        if (image === picLink) {
-        //            alert('You already have this image saved!');
-        //        } else {
-        //            localStorage.setItem(index, picLink);
-        //            index++;
-        //        }
-        //    }
-        //}
-
     })
 
     $('#apod_img_id').hide();
