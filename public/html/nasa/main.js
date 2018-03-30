@@ -52,19 +52,22 @@ $(document).ready(function () {
 
 
     $('#savePic').click(function () {
-        var total = localStorage.length;
         var isSaved = 0;
+        if (localStorage.length == 0) {
+            index = 0;
+        }
         for (var i = 0; i < localStorage.length; i++) {
             var x = localStorage.getItem(i);
             if (x === picLink) {
-                total = 1;
+                isSaved = 1;
             }
         }
 
-        if (total == 1) {
+        if (isSaved == 1) {
             return;
         } else {
-            localStorage.setItem(total, picLink);
+            localStorage.setItem(index, picLink);
+            index++;
         }
     })
 
