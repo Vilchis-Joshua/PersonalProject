@@ -52,24 +52,26 @@ $(document).ready(function () {
 
 
     $('#savePic').click(function () {
-        var isSaved = 0;
-        if (localStorage.length == 0) {
-            index = 0;
-        }
-
-        for (var i = 0; i < localStorage.length; i++) {
-            var x = localStorage.getItem(i);
-            if (x === picLink) {
-                isSaved = 1;
+        if (picLink != null) {
+            var isSaved = 0;
+            if (localStorage.length == 0) {
+                index = 0;
             }
-        }
 
-        if (isSaved == 1) {
-            return;
-        } else {
-            console.log(index);
-            localStorage.setItem(index, picLink);
-            index++;
+            for (var i = 0; i < localStorage.length; i++) {
+                var x = localStorage.getItem(i);
+                if (x === picLink) {
+                    isSaved = 1;
+                }
+            }
+
+            if (isSaved == 1) {
+                return;
+            } else {
+                console.log(index);
+                localStorage.setItem(index, picLink);
+                index++;
+            }
         }
     })
 
