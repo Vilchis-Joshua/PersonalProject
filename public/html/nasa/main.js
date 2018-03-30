@@ -56,6 +56,7 @@ $(document).ready(function () {
         if (localStorage.length == 0) {
             index = 0;
         }
+
         for (var i = 0; i < localStorage.length; i++) {
             var x = localStorage.getItem(i);
             if (x === picLink) {
@@ -66,6 +67,7 @@ $(document).ready(function () {
         if (isSaved == 1) {
             return;
         } else {
+            console.log(index);
             localStorage.setItem(index, picLink);
             index++;
         }
