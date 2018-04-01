@@ -33,7 +33,8 @@ $(document).ready(function () {
 
                 if (result.media_type == "video") {
                     $("#apod_img_id").css("display", "none");
-                    $("#apod_vid_id").attr("src", result.url);
+                    //$("#apod_vid_id").attr("src", result.url);
+                    $("#apod_img_id").tex('Sorry, no videos!');
                 }
                 else {
                     $("#apod_vid_id").css("display", "none");
@@ -52,26 +53,25 @@ $(document).ready(function () {
 
 
     $('#savePic').click(function () {
-        if (picLink != null) {
-            var isSaved = 0;
-            if (localStorage.length == 0) {
-                index = 0;
-            }
+        var isSaved = 0;
+        if (localStorage.length == 0) {
+            index = 0;
+        }
 
-            for (var i = 0; i < localStorage.length; i++) {
-                var x = localStorage.getItem(i);
-                if (x === picLink) {
-                    isSaved = 1;
-                }
+        for (var i = 0; i < localStorage.length; i++) {
+            var x = localStorage.getItem(i);
+            if (x === picLink) {
+                isSaved = 1;
             }
+        }
 
-            if (isSaved == 1) {
-                console.log('repeat');
-                return;
-            } else {
-                console.log(index);
+        if (isSaved == 1) {
+            console.log('repeat');
+            return;
+        } else {
+            if (picLink !== undefined && index !== undefined) {
                 localStorage.setItem(index, picLink);
-                index++;
+                index += 1;
             }
         }
     })
