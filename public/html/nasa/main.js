@@ -3,6 +3,9 @@ var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var d;
 var picLink;
 var index = 0;
+if (index === 0) {
+    localStorage.setItem('index', 0);
+}
 
 $(document).ready(function () {
     $('#apodBtn').click(function () {
