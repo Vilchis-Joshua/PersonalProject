@@ -5,16 +5,18 @@ function startUp() {
         document.getElementById('display').innerHTML = text;
     } else {
         for (var i = 0; i < localStorage.length; i++) {
-            //var image = document.createElement('img');
-            var image = document.createElement('img');
-            image.setAttribute('id', ('image ' + 1));
-            var saved = localStorage.getItem(i);
-            //console.log('saved: ' + saved);
-            image.setAttribute('src', saved);
-            image.setAttribute('width', '250px');
-            image.setAttribute('height', '250px');
+            if (i !== 2) {
+                //var image = document.createElement('img');
+                var image = document.createElement('img');
+                image.setAttribute('id', ('image ' + 1));
+                var saved = localStorage.getItem(i);
+                //console.log('saved: ' + saved);
+                image.setAttribute('src', saved);
+                image.setAttribute('width', '250px');
+                image.setAttribute('height', '250px');
 
-            document.getElementById('displaySaved').appendChild(image)
+                document.getElementById('displaySaved').appendChild(image)
+            }
         }
     }
 }
