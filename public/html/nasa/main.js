@@ -2,9 +2,7 @@ var url = "https://api.nasa.gov/planetary/apod?date=";
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var d;
 var picLink;
-if (localStorage.length === 0) {
-    var index = 0;
-}
+var index = 0;
 
 $(document).ready(function () {
     $('#apodBtn').click(function () {
@@ -57,10 +55,6 @@ $(document).ready(function () {
     $('#savePic').click(function () {
         var isSaved = 0;
 
-        //if (localStorage.length !== 0) {
-        //    index = localStorage.length + 1;
-        //}
-
         for (var i = 0; i < localStorage.length; i++) {
             var x = localStorage.getItem(i);
             if (x === picLink) {
@@ -73,9 +67,13 @@ $(document).ready(function () {
             return;
         } else {
             if (picLink !== undefined && index !== undefined) {
-                localStorage.setItem(index, picLink);
-                console.log('index first: ' + index);
-                index++;
+                var temp = localStorage.getItem('index');
+                localStorage.setItem(temp, picLink);
+                temp++;
+                localStorage.setItem('index', temp);
+                //localStorage.setItem(index, picLink);
+                //console.log('index first: ' + index);
+                //index++;
             } else {
                 console.log('Index: ' + index);
             }
