@@ -4,7 +4,7 @@ var d;
 var picLink;
 var index = 0;
 if (index === 0) {
-    localStorage.setItem('index', 0);
+    localStorage.setItem(0, 0);
     index++;
 }
 
@@ -71,7 +71,7 @@ $(document).ready(function () {
             return;
         } else {
             if (picLink !== undefined && index !== undefined) {
-                var temp = localStorage.getItem('index');
+                var temp = localStorage.getItem(0);
                 temp++;
                 localStorage.setItem(temp, picLink);
                 localStorage.setItem('index', temp);
