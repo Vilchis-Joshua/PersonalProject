@@ -27,6 +27,7 @@ $(document).ready(() => {
         if (answer == true) {
             $('img').remove();
             localStorage.clear();
+            index = 0;
             $('#display').text('You have no saved photos yet!');
         }
     })
