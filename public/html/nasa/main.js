@@ -50,7 +50,7 @@ $(document).ready(function () {
                 $("#main_title").text(result.title);
                 $("returnObject").hide();
                 picLink = result.url;
-                console.log(picLink);
+                //console.log(picLink);
             }
         });
     })
@@ -72,7 +72,6 @@ $(document).ready(function () {
         } else {
             if (picLink !== undefined && index !== undefined) {
                 var temp = localStorage.length;
-                console.log('temp ' + temp);
                 localStorage.setItem(temp, picLink);
                 temp++;
                 localStorage.setItem(0, temp);
