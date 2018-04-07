@@ -74,7 +74,7 @@ $(document).ready(function () {
                 var temp = localStorage.getItem(0);
                 temp++;
                 localStorage.setItem(temp, picLink);
-                localStorage.setItem('index', temp);
+                localStorage.setItem(0, temp);
                 //localStorage.setItem(index, picLink);
                 //console.log('index first: ' + index);
                 //index++;
