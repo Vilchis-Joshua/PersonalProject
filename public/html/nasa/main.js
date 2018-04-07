@@ -2,7 +2,7 @@ var url = "https://api.nasa.gov/planetary/apod?date=";
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var d;
 var picLink;
-if (localStorage.length == ) {
+if (localStorage.length === 0) {
     var index = 0;
 }
 
