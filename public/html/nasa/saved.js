@@ -6,6 +6,7 @@ function startUp() {
     } else {
         for (var i = 0; i < localStorage.length; i++) {
             if (localStorage.key(i) !== 'index') {
+                console.log('local: ' + localStorage.key(i));
                 //var image = document.createElement('img');
                 var image = document.createElement('img');
                 image.setAttribute('id', ('image ' + 1));
