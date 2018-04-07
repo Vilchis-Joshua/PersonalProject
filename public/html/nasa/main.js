@@ -72,6 +72,7 @@ $(document).ready(function () {
         } else {
             if (picLink !== undefined && index !== undefined) {
                 var temp = localStorage.getItem(0);
+                console.log('temp ' + temp);
                 temp++;
                 localStorage.setItem(temp, picLink);
                 localStorage.setItem(0, temp);
