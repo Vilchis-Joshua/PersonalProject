@@ -1,5 +1,3 @@
-import { localsName } from "./C:/Users/joshs/AppData/Local/Microsoft/TypeScript/2.6/node_modules/@types/ejs";
-
 var url = "https://api.nasa.gov/planetary/apod?date=";
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var d;
