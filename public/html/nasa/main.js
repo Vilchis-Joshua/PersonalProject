@@ -5,6 +5,7 @@ var picLink;
 var index = 0;
 if (index === 0) {
     localStorage.setItem('index', 0);
+    index++;
 }
 
 $(document).ready(function () {
