@@ -78,8 +78,6 @@ $(document).ready(function () {
                 //localStorage.setItem(index, picLink);
                 //console.log('index first: ' + index);
                 //index++;
-            } else {
-                console.log('Index: ' + index);
             }
         }
     })

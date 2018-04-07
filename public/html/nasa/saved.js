@@ -5,7 +5,7 @@ function startUp() {
         document.getElementById('display').innerHTML = text;
     } else {
         for (var i = 0; i < localStorage.length; i++) {
-            if (localStorage.key !== 'index') {
+            if (localStorage.key(i) !== 'index') {
                 //var image = document.createElement('img');
                 var image = document.createElement('img');
                 image.setAttribute('id', ('image ' + 1));
