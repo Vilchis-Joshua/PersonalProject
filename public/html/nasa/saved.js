@@ -4,17 +4,30 @@ function startUp() {
         var text = 'You have no saved photos yet!';
         document.getElementById('display').innerHTML = text;
     } else {
-        for (var i = 1; i < localStorage.length; i++) {
-            //var image = document.createElement('img');
+        if (localStorage.length === 1) {
             var image = document.createElement('img');
             image.setAttribute('id', ('image'));
-            var saved = localStorage.getItem(i);
+            var saved = localStorage.getItem(1);
             //console.log('saved: ' + saved);
             image.setAttribute('src', saved);
             image.setAttribute('width', '250px');
             image.setAttribute('height', '250px');
 
             document.getElementById('displaySaved').appendChild(image);
+        }
+        else {
+            for (var i = 1; i < localStorage.length; i++) {
+                //var image = document.createElement('img');
+                var image = document.createElement('img');
+                image.setAttribute('id', ('image'));
+                var saved = localStorage.getItem(i);
+                //console.log('saved: ' + saved);
+                image.setAttribute('src', saved);
+                image.setAttribute('width', '250px');
+                image.setAttribute('height', '250px');
+
+                document.getElementById('displaySaved').appendChild(image);
+            }
         }
     }
 }
