@@ -1,8 +1,12 @@
+import { localsName } from "./C:/Users/joshs/AppData/Local/Microsoft/TypeScript/2.6/node_modules/@types/ejs";
+
 var url = "https://api.nasa.gov/planetary/apod?date=";
 var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var d;
 var picLink;
-var index = 0;
+if (localStorage.length == ) {
+    var index = 0;
+}
 
 $(document).ready(function () {
     $('#apodBtn').click(function () {
@@ -55,9 +59,9 @@ $(document).ready(function () {
     $('#savePic').click(function () {
         var isSaved = 0;
 
-        if (localStorage.length !== 0) {
-            index = localStorage + 1;
-        }
+        //if (localStorage.length !== 0) {
+        //    index = localStorage.length + 1;
+        //}
 
         for (var i = 0; i < localStorage.length; i++) {
             var x = localStorage.getItem(i);
