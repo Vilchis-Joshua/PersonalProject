@@ -75,9 +75,6 @@ $(document).ready(function () {
                 localStorage.setItem(temp, picLink);
                 temp++;
                 localStorage.setItem(0, temp);
-                //localStorage.setItem(index, picLink);
-                //console.log('index first: ' + index);
-                //index++;
             }
         }
     })
