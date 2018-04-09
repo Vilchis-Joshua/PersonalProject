@@ -91,7 +91,7 @@ img {
     font-weight: bold;
 }
 
-#main_title, #main_p {
+#main_title, #main_p, #footerlink {
     display: flex;
     justify-content: center;
 }
