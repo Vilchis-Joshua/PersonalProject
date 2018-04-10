@@ -3,6 +3,11 @@ var apiKey = "&api_key=ssJOmcyAlMslRMBklollwmpbUSmejdcgJlsemAzo";
 var d;
 var picLink;
 var index = 0;
+var jsonString = "";
+var jsonObj = [];
+
+
+
 if (index === 0) {
     localStorage.setItem(0, 0);
     index++;
@@ -43,13 +48,22 @@ $(document).ready(function () {
                 else {
                     $("#apod_vid_id").css("display", "none");
                     $("#apod_img_id").attr("src", result.url);
+
                 }
                 $("#reqObject").text(url);
                 $("#returnObject").text(JSON.stringify(result, null, 4));
                 $("#picDescrip").text(result.explanation);
                 $("#main_title").text(result.title);
                 $("returnObject").hide();
+
+                var picInfo = {};
+                picInfo['index'] = result.title;
+                picInfo['url'] = result.url;
+
                 picLink = result.url;
+                jsonObj.push(picInfo);
+                jsonString = JSON.stringify(jsonObj);
+                console.log(jsonString);
                 //console.log(picLink);
             }
         });
